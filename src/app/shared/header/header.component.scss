@@ -1,10 +1,11 @@
 header {
+    background-color: #FFFF;
   display: flex;
   justify-content: center;
   img {
     width: 30%;
   }
-  border-bottom: 1px solid;
-  padding: 10px;
-  box-shadow: 0 5px;
+  -webkit-box-shadow: 0px 15px 16px 0px rgba(168, 142, 86, 0.8);
+  -moz-box-shadow: 0px 15px 16px 0px rgba(168, 142, 86, 0.8);
+  box-shadow: 0px 15px 16px 0px rgba(168, 142, 86, 0.8);
 }
