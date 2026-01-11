@@ -1,7 +1,12 @@
 <section>
-  <aside>
+  <aside class="additem">
     <span>Hinzufügen</span>
     <a (click)="openDialog()">+</a>
+  </aside>
+  
+  <aside class="searchfield">
+    <input type="text" placeholder="Suchen..." />
+    <mat-icon>search</mat-icon>
   </aside>
 
   <app-single-item></app-single-item>

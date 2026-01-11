@@ -2,11 +2,12 @@ import { Component, inject, model, signal } from '@angular/core';
 import { SingleItemComponent } from './single-item/single-item.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AddItemDialogComponent } from './add-item-dialog/add-item-dialog.component';
-AddItemDialogComponent
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-inventory-list',
-  imports: [SingleItemComponent ],
+  imports: [SingleItemComponent, MatFormFieldModule, MatIconModule ],
   templateUrl: './inventory-list.component.html',
   styleUrl: './inventory-list.component.scss',
 })
