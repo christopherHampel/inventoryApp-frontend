@@ -1,8 +1,17 @@
 section {
     border: 2px solid rgba(168, 142, 86, 1);
     border-radius: 30px;
-    padding: 40px;
+    padding: 32px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 400px;
+
+    .name {
+        font-size: 18px;
+    }
+
+    .amount {
+        font-size: 32px;
+    }
 }
