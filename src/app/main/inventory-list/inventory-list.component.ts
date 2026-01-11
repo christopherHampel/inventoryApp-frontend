@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { SingleItemComponent } from './single-item/single-item.component';
 
 @Component({
   selector: 'app-inventory-list',
-  imports: [MatCardModule, MatButtonModule],
+  imports: [ SingleItemComponent ],
   templateUrl: './inventory-list.component.html',
   styleUrl: './inventory-list.component.scss'
 })
