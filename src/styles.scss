@@ -7,5 +7,17 @@ body {
   background-color: #fff2ef;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
+  -moz-box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
+  box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
+}
