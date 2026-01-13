@@ -1,18 +1,16 @@
 header {
   background-color: #ffff;
-  padding: 20px 0;
+  height: var(--header-height);
   display: flex;
+  align-items: center;
   justify-content: center;
   span {
     position: absolute;
     top: 24px;
     left: 24px;
   }
-  // img {
-  //   width: 25%;
-  // }
 
   h1 {
-    color: rgba(168, 142, 86, 1);
+    color: var(--primary-gold);
   }
 }
