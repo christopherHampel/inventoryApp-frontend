@@ -1,2 +1,14 @@
-<p>add-item-dialog works!</p>
-<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium consequatur suscipit aperiam totam illum autem dolor dolores maxime temporibus magni, incidunt nostrum in illo rem perspiciatis, enim facere eius iste!</div>
+<section>
+  <h2>Neues Produkt hinzufügen</h2>
+
+  <article>
+    <input type="text" placeholder="Produktname" [(ngModel)]="productName" />
+
+    <aside>
+      <button (click)="onNoClick()">Abbrechen</button>
+      <button matButton [mat-dialog-close]="" (click)="addProduct()">
+        Hinzufügen
+      </button>
+    </aside>
+  </article>
+</section>

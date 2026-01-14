@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #fff2ef;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 html,
@@ -25,4 +25,10 @@ body {
   -webkit-box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
   -moz-box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
   box-shadow: 14px 15px 16px 0px rgba(168, 142, 86, 0.8);
+}
+
+button {
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-gold);
 }
