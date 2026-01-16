@@ -5,6 +5,7 @@
 
 :root {
   --primary-gold: rgb(168, 142, 86);
+  --white: rgb(255, 255, 255);
   --header-height: 80px;
 }
 
@@ -31,4 +32,10 @@ button {
   padding: 8px;
   border-radius: 20px;
   border: 1px solid var(--primary-gold);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

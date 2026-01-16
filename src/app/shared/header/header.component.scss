@@ -1,9 +1,6 @@
 header {
-  background-color: #ffff;
+  background-color: var(--white);
   height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   span {
     position: absolute;
     top: 24px;
