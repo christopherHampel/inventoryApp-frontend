@@ -4,11 +4,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddItemDialogComponent } from './add-item-dialog/add-item-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-
+import { ItemsService } from '../../services/items.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-inventory-list',
-  imports: [SingleItemComponent, MatFormFieldModule, MatIconModule ],
+  imports: [SingleItemComponent, MatFormFieldModule, MatIconModule, CommonModule],
   templateUrl: './inventory-list.component.html',
   styleUrl: './inventory-list.component.scss',
 })
@@ -16,6 +17,12 @@ export class InventoryListComponent {
   readonly productName = signal('');
   readonly name = model('');
   readonly dialog = inject(MatDialog);
+
+  itemService = inject(ItemsService);
+
+  ngOnInit() {
+    this.itemService.loadItems();
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddItemDialogComponent, {
