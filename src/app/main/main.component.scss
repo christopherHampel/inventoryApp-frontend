@@ -3,8 +3,7 @@ main {
 }
 
 article {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -13,6 +12,7 @@ article {
         position: sticky;
         top: 0;
         z-index: 2;
+        width: 100%;
     }
 }
 

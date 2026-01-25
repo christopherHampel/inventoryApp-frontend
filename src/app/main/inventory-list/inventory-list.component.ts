@@ -9,7 +9,12 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-inventory-list',
-  imports: [SingleItemComponent, MatFormFieldModule, MatIconModule, CommonModule],
+  imports: [
+    SingleItemComponent,
+    MatFormFieldModule,
+    MatIconModule,
+    CommonModule,
+  ],
   templateUrl: './inventory-list.component.html',
   styleUrl: './inventory-list.component.scss',
 })
@@ -21,7 +26,14 @@ export class InventoryListComponent {
   itemService = inject(ItemsService);
 
   ngOnInit() {
-    this.itemService.loadItems();
+    setTimeout(() => {
+      this.itemService.loadItems();
+      setTimeout(() => {
+        this.itemService.itemsSignal().forEach((item) => {
+          console.log('Item:', item);
+        }, 6000);
+      });
+    }, 2000);
   }
 
   openDialog(): void {

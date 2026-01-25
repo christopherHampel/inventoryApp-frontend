@@ -1,20 +1,29 @@
 <section>
-  <aside class="additem">
-    <span>Hinzufügen</span>
-    <a (click)="openDialog()">+</a>
-  </aside>
-  
-  <aside class="searchfield">
-    <input type="text" placeholder="Suchen..." />
-    <mat-icon>search</mat-icon>
-  </aside>
+  <article>
+    <aside class="additem">
+      <span>Hinzufügen</span>
+      <a (click)="openDialog()">+</a>
+    </aside>
 
-      <ul>
-      <li *ngFor="let item of itemService.items()">
-        {{ item.name }}, {{ item.amount }}, {{ item.description }}
-      </li>
-    </ul>
+    <aside class="searchfield">
+      <input type="text" placeholder="Suchen..." />
+      <mat-icon>search</mat-icon>
+    </aside>
+  </article>
 
+
+  <ul>
+    <li *ngFor="let item of itemService.items()">
+      {{ item.name }}, {{ item.amount }}, {{ item.description }}
+    </li>
+  </ul>
+
+  <app-single-item></app-single-item>
+  <app-single-item></app-single-item>
+  <app-single-item></app-single-item>
+  <app-single-item></app-single-item>
+  <app-single-item></app-single-item>
+  <app-single-item></app-single-item>
   <app-single-item></app-single-item>
   <app-single-item></app-single-item>
   <app-single-item></app-single-item>

@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class ItemsService {
-  private itemsSignal = signal<any[]>([]);
+  itemsSignal = signal<any[]>([]);
   items = this.itemsSignal.asReadonly();
 
   constructor(private http: HttpClient) {}
@@ -13,7 +13,7 @@ export class ItemsService {
   loadItems() {
     this.http.get<any[]>('http://localhost:3000/items')
       .subscribe({
-        next: data => this.itemsSignal.set(data),
+        next: data => this.itemsSignal.set(data),        
         error: err => console.error(err)
       });
   }
