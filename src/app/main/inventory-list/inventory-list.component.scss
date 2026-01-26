@@ -12,6 +12,14 @@ section {
     gap: 20px;
   }
 
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+  }
+
   .additem {
     display: flex;
     align-items: center;

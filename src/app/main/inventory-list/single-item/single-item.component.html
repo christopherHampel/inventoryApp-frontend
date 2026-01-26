@@ -1,4 +1,37 @@
-<section>
-    <span class="name"><i>Placeholder</i></span>
-    <span class="amount">2</span>
-</section>
+<article class="item-card" aria-labelledby="item-title-1">
+  <header class="card-header">
+    <div class="title-section">
+      <h2 class="item-title" id="item-title-1">Schrauben M8</h2>
+      <p class="item-category">Befestigung</p>
+    </div>
+    <button class="menu-button" type="button" aria-label="Weitere Aktionen">
+      <mat-icon aria-hidden="true">more_vert</mat-icon>
+    </button>
+  </header>
+
+  <div class="card-content">
+    <dl class="stock-info" aria-label="Bestandsinformationen">
+      <div class="stock-row">
+        <dt class="stock-label">Bestand</dt>
+        <dd class="stock-value">42 <span class="stock-unit">Stück</span></dd>
+      </div>
+    </dl>
+
+    <div class="quantity-control" role="group" aria-label="Bestand anpassen">
+      <button class="quantity-button" type="button" aria-label="Bestand verringern">-</button>
+      <output class="quantity-display" aria-label="Aktueller Bestand">42</output>
+      <button class="quantity-button" type="button" aria-label="Bestand erhöhen">+</button>
+    </div>
+  </div>
+
+  <footer class="card-actions" aria-label="Aktionen">
+    <button class="action-button edit-button" type="button" aria-label="Artikel bearbeiten">
+      <mat-icon aria-hidden="true">edit</mat-icon>
+      <span>Bearbeiten</span>
+    </button>
+    <button class="action-button delete-button" type="button" aria-label="Artikel löschen">
+      <mat-icon aria-hidden="true">delete</mat-icon>
+      <span>Löschen</span>
+    </button>
+  </footer>
+</article>
