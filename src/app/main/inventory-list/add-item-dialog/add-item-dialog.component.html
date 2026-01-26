@@ -1,14 +1,25 @@
 <section>
-  <h2>Neues Produkt hinzufügen</h2>
+  <form (ngSubmit)="addProduct()">
+    <article>
+      <mat-form-field appearance="outline" [hidden]="mode !== 'product'">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Produktname" [(ngModel)]="name" name="name" [required]="mode === 'product'" />
+      </mat-form-field>
 
-  <article>
-    <input type="text" placeholder="Produktname" [(ngModel)]="productName" />
+      <mat-form-field appearance="outline">
+        <mat-label>Kategorie</mat-label>
+        <input matInput type="text" placeholder="Kategorie" [(ngModel)]="category" name="category" required />
+      </mat-form-field>
 
-    <aside>
-      <button (click)="onNoClick()">Abbrechen</button>
-      <button matButton [mat-dialog-close]="" (click)="addProduct()">
-        Hinzufügen
-      </button>
-    </aside>
-  </article>
+      <mat-form-field appearance="outline" [hidden]="mode !== 'product'">
+        <mat-label>Anfangsbestand</mat-label>
+        <input matInput type="number" placeholder="Anfangsbestand" [(ngModel)]="amount" name="amount" min="0" />
+      </mat-form-field>
+
+      <aside>
+        <button type="button" mat-button (click)="onNoClick()">Abbrechen</button>
+        <button type="submit" mat-button color="primary">Hinzufügen</button>
+      </aside>
+    </article>
+  </form>
 </section>

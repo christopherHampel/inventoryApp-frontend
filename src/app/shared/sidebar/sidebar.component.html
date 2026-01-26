@@ -1,3 +1,31 @@
 <section>
     <article class="header-height"></article>
+    
+    <nav class="sidebar-nav">
+        <button 
+            class="nav-button" 
+            [class.active]="showCategories"
+            (click)="toggleCategories()">
+            Kategorien
+        </button>
+        
+        <div class="categories-list" *ngIf="showCategories">
+            <button 
+                class="add-category-button"
+                (click)="openAddCategoryDialog()">
+                + Kategorie hinzufügen
+            </button>
+            <button 
+                class="category-item"
+                (click)="selectCategory(null)">
+                Alle
+            </button>
+            <button 
+                *ngFor="let category of itemsService.categories()"
+                class="category-item"
+                (click)="selectCategory(category)">
+                {{ category }}
+            </button>
+        </div>
+    </nav>
 </section>

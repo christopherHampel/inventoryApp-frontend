@@ -1,14 +1,77 @@
 section {
-    padding: 40px;
+  padding: 40px;
+  min-width: 400px;
 
-    input {
-        width: 100%;
-    }
+  .header-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: #f5f5f5;
+    width: fit-content;
 
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .toggle-button {
+      padding: 8px 24px;
+      border: none;
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+
+      &.active {
+        background-color: #fff;
+        color: #1976d2;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
     }
+  }
+
+  form {
+    width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  mat-form-field {
+    width: 100%;
+    min-height: 56px; // Feste Höhe für Material Form Fields (inkl. Label)
+    
+    &[hidden] {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      // Höhe bleibt erhalten durch min-height
+    }
+  }
+
+  aside {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  button {
+    min-width: 100px;
+  }
 }
